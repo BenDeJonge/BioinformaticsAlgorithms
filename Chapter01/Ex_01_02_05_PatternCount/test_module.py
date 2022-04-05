@@ -17,7 +17,7 @@ from pattern_count import pattern_count
 
 #==============================================================================
 
-class TestListEquality(unittest.TestCase):
+class TestEquality(unittest.TestCase):
     '''
     Unittest for equality of counts.
     '''
