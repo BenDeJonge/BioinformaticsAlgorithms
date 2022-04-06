@@ -13,7 +13,7 @@ import unittest
 
 path = os.path.dirname(__file__)
 os.chdir(path)
-from pattern_count import pattern_count
+from pattern_count import pattern_count as fun
 
 #==============================================================================
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     for file in inputs:
         with open(file, 'r') as f:
             text, pattern = f.read().splitlines()
-            counts.append(pattern_count(text, pattern))
+            counts.append(fun(text, pattern))
     # Testing equality.
     unittest.main()
     
