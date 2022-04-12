@@ -10,7 +10,7 @@
 
 ## Table of contents
 
-1. Where in the Genome Does Replication Begin? - *Algorithmic Warmup*
+1. Where in the Genome Does Replication Begin? - *Algorithmic Warmup* - **finished**
 2. Which DNA Patterns Play the Role of Molecular Clocks? - *Randomized Algorithms*
 3. How Do We Assemble Genomes? - *Graph Algorithms*
 4. How Do We Sequence Antibiotics?  - *Brute Force Algoritms*
