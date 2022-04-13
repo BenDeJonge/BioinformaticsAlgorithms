@@ -1,9 +1,3 @@
----
-title: Introduction
-layout: template
-filename: 00_Index
---- 
-
 # Introduction
 
 ## The source material
