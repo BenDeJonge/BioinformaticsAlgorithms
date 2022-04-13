@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+---
+title: Introduction
+layout: template
+filename: 00_Index
+--- 
 
-You can use the [editor on GitHub](https://github.com/BenDeJonge/BioinformaticsAlgorithms/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## The source material
+In this blog, I am planning to document my journey and learnings from the 'Bioinformatics Algorithms: An active learning approach' handbook, written by P. Compeau and P. Pevzner. This exciting book is available on [Amazon](https://www.amazon.com/BIOINFORMATICS-ALGORITHMS-Phillip-Compeau-dp-0990374637/dp/0990374637/), [Stepik](https://stepik.org/course/55789) and its [own website](https://www.bioinformaticsalgorithms.org/read-the-book). An interactive version can be read (partly for free). The book covers various topics in bioinformatics (see the table of contents below). Every chapter pinpoints a unique question in bioinformatics and provides the reader with practical challenges of rapidly increasing difficulty. This culminates in an epilogue, where the reader is invited to apply all the gathered knowledge by working with real bioinformatics
 
-### Markdown
+## Table of contents
+1. Where in the Genome Does Replication Begin? - *Algorithmic Warmup*
+2. Which DNA Patterns Play the Role of Molecular Clocks? - *Randomized Algorithms*
+3. How Do We Assemble Genomes? - *Graph Algorithms*
+4. How Do We Sequence Antibiotics?  - *Brute Force Algoritms*
+5. How Do We Compare Biological Sequences? - *Dynamic Programming*
+6. Are There Fragile Regions in the Human Genome? - *Combinatorial Algorithms*
+7. Which Animal Gave Us SARS? - *Evolutionary Tree Reconstruction*
+8. How Did Yeast Become a Wine-Maker? - *Clustering Algorithms*
+9. How Do We Locate Disease-Causing Mutations? - *Combinatorial Pattern Matching*
+10. Why Have Biologists Still Not Developed an HIV Vaccine? - *Hidden Markov Models*
+11. Was T. rex Just a Big Chicken? - *Computational Proteomics*
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BenDeJonge/BioinformaticsAlgorithms/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## About me
+Hi! My name is Ben De Jonge, from Belgium. I am a 25 year old researcher at imec Leuven. I graduated from KU Leuven with both a science (Biochemistry) and engineering degree (Nano-Engineering). In the last couple of years, I discovered my interest for programming, specifically with Python. Gradually, I found my way into bioinformatics, which led me to this handbook. I am planning to slowly crawl my way through this, solving all the assignments along the road.
