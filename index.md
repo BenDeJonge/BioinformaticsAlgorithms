@@ -9,7 +9,7 @@ In this blog, I am planning to document my journey and learnings from the 'Bioin
 
 ## Practicalities
 
-I will be programming purely in Python 3.10.4 (the latest stable version at the time of writing), although I doubt I will be using many features that cannot be compiled any reasonably recent version of Python. All development will be done in the (amazing) Spyder 5.2.2. IDE. When discussing variables and coding in the text, I will use the PEP syntax: `variable : type` or for iterables `iterable : `type[element type]`. For example, `name : str` or `names : list[str]`.
+I will be programming purely in Python 3.10.4 (the latest stable version at the time of writing), although I doubt I will be using many features that cannot be compiled any reasonably recent version of Python. All development will be done in the (amazing) Spyder 5.2.2. IDE. When discussing variables and coding in the text, I will use the PEP syntax: `variable : type` or for iterables `iterable : type[element type]`. For example, `name : str` or `names : list[str]`.
 
 ## About me
 
