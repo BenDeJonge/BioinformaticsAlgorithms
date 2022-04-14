@@ -13,6 +13,6 @@ I will be programming purely in Python 3.10.4 (the latest stable version at the 
 
 ## About me
 
-Hi! My name is Ben De Jonge, from Belgium. I am a 25 year old researcher at imec Leuven. I graduated from KU Leuven with both a science (Biochemistry) and engineering degree (Nano-Engineering). In the last couple of years, I discovered my interest for programming, specifically with Python. Gradually, I found my way into bioinformatics, which led me to this handbook. I am planning to slowly crawl my way through this, solving all the assignments along the road and documenting my understandings here.
+Hi! My name is Ben De Jonge, born and raised in Belgium. I am a 25 year old researcher at imec Leuven. I graduated from KU Leuven with both a science (Biochemistry) and engineering degree (Nano-Engineering). In the last couple of years, I discovered my interest for programming, specifically with Python. Gradually, I found my way into bioinformatics, which led me to this handbook. I am planning to slowly crawl my way through this, solving all the assignments along the road and documenting my understandings here. And even if I don't understand anything at all, this blog will still serve as an excellent introduction to GitHub Pages!
 
 <[Contents](00_toc.md)>
