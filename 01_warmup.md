@@ -4,7 +4,7 @@
 *Algorithmic Warmup*
 
 ![Cover](Figures/01_cover.jpg)
-> Cover of Chapter 1. %copy; P. Compeau, P. Pevzner.
+> Cover of Chapter 1. &copy; P. Compeau, P. Pevzner.
 
 ## Introduction
 
