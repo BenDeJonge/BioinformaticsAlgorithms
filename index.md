@@ -1,6 +1,6 @@
 # Introduction
 
-![Cover art of the book](Figures/00_cover.jpg)
+![Cover art of the book](Assets/Figures/00_cover.jpg)
 > Cover art of 'Bioinformatics Algorithms'. &copy; P. Compeau and P. Pevzner.
 
 ## The source material
