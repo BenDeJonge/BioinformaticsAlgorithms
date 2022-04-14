@@ -6,4 +6,4 @@ In this blog, I am planning to document my journey and learnings from the 'Bioin
 ## About me
 Hi! My name is Ben De Jonge, from Belgium. I am a 25 year old researcher at imec Leuven. I graduated from KU Leuven with both a science (Biochemistry) and engineering degree (Nano-Engineering). In the last couple of years, I discovered my interest for programming, specifically with Python. Gradually, I found my way into bioinformatics, which led me to this handbook. I am planning to slowly crawl my way through this, solving all the assignments along the road and documenting my understandings here.
 
-[Table of contents](00_toc.md)
+<[Contents](00_toc.md)>
