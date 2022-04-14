@@ -1,7 +1,3 @@
------
-title: toc
------
-
 ## Table of contents
 1. Where in the Genome Does Replication Begin? - *Algorithmic Warmup*
 2. Which DNA Patterns Play the Role of Molecular Clocks? - *Randomized Algorithms*
