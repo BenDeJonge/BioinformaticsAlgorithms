@@ -10,3 +10,5 @@
 9. How Do We Locate Disease-Causing Mutations? - *Combinatorial Pattern Matching*
 10. Why Have Biologists Still Not Developed an HIV Vaccine? - *Hidden Markov Models*
 11. Was T. rex Just a Big Chicken? - *Computational Proteomics*
+
+[Previous](index.md)        [Next](01_warmup.md)
