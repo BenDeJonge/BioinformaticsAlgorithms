@@ -95,7 +95,7 @@ To find all indices where the GC-skew is minimal, we can simply use:
             except ValueError:
                 return indices
 
-Using this function, we should be able to find the approximate location of the *ori*. Let's try to plot the GC-skew along the genome of *Salmonella enterica*. This appears to work great! Based on this quick and dirty algorithm, we have found a good approximation for the *ori* in a previously unknown genome.
+Using this function, we should be able to find the approximate location of the *ori*. Let's try to plot the GC-skew along the genome of *Salmonella enterica*. This appears to work great! Based on this quick and dirty algorithm, we have found a good approximation for the *ori* in a previously unknown genome. Now that we can define a more narrow window around *ori*, we can proceed with the definition of patterns to look for in this stretch.
 
 ![GC-skew *S. enterica*.](Assets/Figures/01_gc_skew.png)
 > Anotated plot of the GC-skew along the genome of *S. enterica*. The *ori* is likely located somewhere around 3.7 Mb.
