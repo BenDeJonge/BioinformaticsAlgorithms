@@ -38,6 +38,68 @@ Luckily, biological understanding comes to the rescue once again. Remember that 
 
 How can we computationally apply this newfound knowledge? Well, one of the degradation events single-stranded DNA is exposed to is *cytosine deamination*. One of the four DNA building blocks, cytosine (C), is particularly sensitive to a form of chemical alteration which changes its structure to another DNA building block: thymine (T). If we treat DNA as a more or less random collection of nucleotides, we would expect a nearly equal distribution of all building blocks (A, C, G, T) along its whole sequence. However, due to this preferential degradation of C in the forward half-strands (downstream from *ori*), we should expect a shift in GC-content right around the *ori*. Upstream from *ori*, strands are mainly double-stranded and cytosine should be abundant, while downstream from *ori* strands are more often single-stranded and cytosine is quickly degraded (and thymine will be more prominent). Algoritmically, we can simply calculate the `G-C` count while sliding over the sequence. The *ori* should then be at the index where this difference is minimal (where cytosine switches from common to rare), while the *ter* is at the index where this difference is maximal. This simple algorithm to find the *ori* is called *GC-skew*.   
 
+Algorithmically, this skew can be calculated as follows:
+
+    def skew_diagram(genome : str) -> list[int]:
+        '''
+        Given a genome, calculate the GC-skew along the whole sequence.
+
+        Parameters
+        ----------
+        genome : str
+            The sequence for which to calculate the GC-skew.
+
+        Returns
+        -------
+        list[int]
+            The current GC-skew at each individual index.
+        '''
+        skews = [0]
+        for base in genome:
+            if base == 'C':
+                skews.append(skews[-1] - 1)
+            elif base == 'G':
+                skews.append(skews[-1] + 1)
+            else: 
+                skews.append(skews[-1])
+        return skews
+
+To find all indices where the GC-skew is minimal, we can simply use:
+
+    def minimum_skew(genome: str) -> list[int]:
+        '''
+        Given a genome, find all locations where the skew is minimal. Skew for a
+        fragment of length i is defined as the total G-C count.
+
+        Parameters
+        ----------
+        genome : str
+            The genome to search for skews.
+
+        Returns
+        -------
+        list[int]
+            The skew values for all subfragments.
+        '''
+        skews = skew_diagram(genome)
+        min_skew = min(skews)
+        indices = []
+
+        i = 0
+        while i < len(skews) - 1:
+            fragment = skews[i:]
+            try:
+                i_new = i + fragment.index(min_skew)
+                indices.append(i_new)
+                i = i_new + 1
+            except ValueError:
+                return indices
+
+Using this function, we should be able to find the approximate location of the *ori*. Let's try to plot the GC-skew along the genome of *Salmonella enterica*. This appears to work great! Based on this quick and dirty algorithm, we have found a good approximation for the *ori* in a previously unknown genome.
+
+![GC-skew *S. enterica*.](Assets/Figures/01_gc_skew.png)
+> Anotated plot of the GC-skew along the genome of *S. enterica*. The *ori* is likely located somewhere around 3.7 Mb.
+
 ## Finding repeating patterns in *ori*
 
 frequent_words
