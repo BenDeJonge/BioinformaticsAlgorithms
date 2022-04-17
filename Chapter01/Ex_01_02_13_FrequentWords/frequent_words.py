@@ -7,16 +7,16 @@ Created on Wed Apr  6 09:05:05 2022
 
 #==============================================================================
 
-def get_frequency_table(text : str, k : int) -> dict:
+def get_frequency_table(text : str, length : int) -> dict:
     '''
     Given a text (string) and a size k (int), return the a frequency table of
-    occurences of text fragment of length k in the text.
+    occurences of text fragment of length in the text.
     
     Parameters
     ----------
     text : str
         The text to look for patterns.
-    k : int
+    length : int
         The length of the pattern to look for.
 
     Returns
@@ -26,8 +26,8 @@ def get_frequency_table(text : str, k : int) -> dict:
     '''
     # Construct frequency table.
     frequent_words = {}
-    for i in range(len(text) - k + 1):
-        fragment = text[ i : i + k ]
+    for i in range(len(text) - length + 1):
+        fragment = text[ i : i + length ]
         try:
             frequent_words[fragment] += 1
         except KeyError:
@@ -36,7 +36,7 @@ def get_frequency_table(text : str, k : int) -> dict:
 
 #==============================================================================
 
-def frequent_words(text : str, k : int) -> list:
+def frequent_words(text : str, length : int) -> list:
     '''
     Given a text (string) and a size k (int), return the text fragment of 
     length k that occurs most in the text.
@@ -48,7 +48,7 @@ def frequent_words(text : str, k : int) -> list:
     ----------
     text : str
         The text to look for patterns.
-    k : int
+    length : int
         The length of the pattern to look for.
 
     Returns
@@ -56,10 +56,10 @@ def frequent_words(text : str, k : int) -> list:
     list
         The fragment of length k with the most occurences.
     '''
-    fw = get_frequency_table(text, k)
+    ft = get_frequency_table(text, length)
     # Find max frequency and get all values with that frequency.
-    max_count = max(fw.values())
-    frequent_list = [ fragment for fragment, count in fw.items() 
+    max_count = max(ft.values())
+    frequent_list = [ fragment for fragment, count in ft.items() 
                       if count == max_count ]   
     return sorted(frequent_list)
 
