@@ -54,6 +54,9 @@ class FastaReader:
             text = self._text[1:]
         genome = ''.join( line.strip() for line in text )
         return description, genome
+    
+    def __repr__(self):
+        return f'Genome of {self.name}'
 
 #==============================================================================
 
@@ -88,8 +91,8 @@ if PLOTTING:
 #------------------------------------------------------------------------------
 
 # Determining ori window and search settings.
-width = 1000
-before = width // 2
+width = 500
+before = 50
 window = salmonella.genome[i_min_skew - before : i_min_skew + (width - before)]
 length = 9
 mismatches = 1
@@ -125,6 +128,12 @@ if PLOTTING:
     ax_dnaa.set_title(f'Potential ORI location in $\it{f"{salmonella.abbrev}"}$ window [{width} b]')
     ax_dnaa.set_xlabel('Column')
     ax_dnaa.set_ylabel('Row')
+    # Plotting bases in boxes.
+    boxes = np.where(data == 1)
+    for row, col in zip(*boxes):
+        base = window[ row * xdim + col ]
+        ax_dnaa.text(col, row, base, va='center', ha='center',
+                     color=(1,0,0), size='x-small', family='monospace')
     # Saving.
     fig_dnaa.savefig(os.path.join(os.path.dirname(__file__), 'dnaa_loc.png'),
                      dpi=300, transparent=True, bbox_inches='tight')
