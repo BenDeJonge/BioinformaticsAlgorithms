@@ -35,7 +35,6 @@ def grab_args_from_file(fpath):
             else:
                 text = l.split()
                 if len(text) > 1:
-                    print('making set')
                     args.append(text)
                 else:
                     args.append(text[0])
@@ -50,8 +49,12 @@ def read_and_solve(fun : callable):
     try:
         args = grab_args_from_file(fpath)
         sol = fun(*args)
-        with open(os.path.join(fpath, 'output.txt'), 'w') as f:
-            f.write(' '.join(str(s) for s in sol ))
+        with open(os.path.join( os.path.dirname(fpath),
+                                'output.txt'), 'w') as f:
+            if any( isinstance(sol, typ) for typ in (int, float, str) ):
+                f.write(str(sol))
+            else:
+                f.write(' '.join(str(s) for s in sol ))
     except AttributeError:
         pass
     root.destroy()
