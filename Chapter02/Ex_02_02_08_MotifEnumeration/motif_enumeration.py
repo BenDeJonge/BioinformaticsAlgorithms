@@ -37,7 +37,7 @@ def motif_enumeration(length : int, mismatches : int,
     for gene in genes:
         freq_map = get_freq_map_neighbors(gene, length, mismatches)
         candidates[gene] = set(freq_map.keys())
-    return candidates[genes[0]].intersection(*candidates.values())
+    return set.intersection(*candidates.values())
 
 #==============================================================================
 
